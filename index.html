@@ -48,11 +48,10 @@
 
             const firestore = firebase.firestore()
 
-            /**
-             * * Main Runtime
-             * 
-             * ? Anything which related to DOM should be run here.
-             */
+            firestore
+            .collection("This is collection")
+            .doc("This is document")
+            .set({value: 1_000_000, update: Date.now()})
             main(() => {
                 /**
                  * ? When element with id "read" is clicked.
